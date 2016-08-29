@@ -34,14 +34,14 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
    ```java
    AutoBindingAdapter adapter = new AutoBindingAdapter()
                 .buildItem(R.layout.normal_item, ItemViewHolder.class)
-                .buildHeader(R.layout.header_item, HeaderViewHolder.class)
-                .buildFooter(R.layout.footer_item, FooterViewHolder.class)
+                .buildHeader(R.layout.header_item, HeaderViewHolder.class)       //optional
+                .buildFooter(R.layout.footer_item, FooterViewHolder.class)       //optional
                 .bindItems(catchPokemons())
-                .bindHeader(headerItem)
-                .bindFooter(footerItem);
+                .bindHeader(headerItem)                                          //optional
+                .bindFooter(footerItem);                                         //optional
 
-    adapter.enableHeader(true);
-    adapter.enableFooter(true);
+    adapter.enableHeader(true);                                                  //optional
+    adapter.enableFooter(true);                                                  //optional
   ```
   
 ##Are you using Grid?
