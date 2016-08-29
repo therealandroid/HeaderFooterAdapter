@@ -10,15 +10,15 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
    Your ViewHolder class must extends `GenericItemViewHolder`
   
   ```java
-  public class FooterViewHolder extends GenericItemViewHolder<FooterItem> {
+  public class FooterViewHolder extends GenericItemViewHolder<Pokemon> {
 
     public FooterViewHolder(View itemView) {
         super(itemView);
     }
 
     @Override
-    public void bindItem(FooterItem item) {
-
+    public void bindItem(Pokemon item) {
+         //bind your view
     }
  }
  ```
