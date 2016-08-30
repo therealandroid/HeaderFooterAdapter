@@ -108,7 +108,7 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
         return this;
     }
 
-    public AutoBindAdapter asGrid(RecyclerView recyclerView, int size, final OnLoadMoreListener loadMoreListener){
+    public AutoBindAdapter asGrid(RecyclerView recyclerView, final int size, final OnLoadMoreListener loadMoreListener){
         GridLayoutManager gridLayoutManager = new GridLayoutManager(recyclerView.getContext(), size);
         recyclerView.setLayoutManager(gridLayoutManager);
         recyclerView.addOnScrollListener(new EndlessRecyclerOnScrollListener(gridLayoutManager) {
@@ -123,7 +123,7 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
             @Override
             public int getSpanSize(int position) {
                 if(isHeaderPosition(position) || isFooterPosition(position)){
-                    return 2;
+                    return size;
                 }else{
                     return 1;
                 }
@@ -135,6 +135,7 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
 
     public AutoBindAdapter asList(RecyclerView recyclerView, final OnLoadMoreListener loadMoreListener){
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(recyclerView.getContext());
+        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.addOnScrollListener(new EndlessRecyclerOnScrollListener(linearLayoutManager) {
             @Override
             public void onLoadMore(int current_page) {

@@ -38,7 +38,7 @@ public class TestActivity extends AppCompatActivity {
                 .bindFooter(footerItem)
                 .enableHeader(true)
                 .enableFooter(true)
-                .asGrid(recyclerView, 2, new AutoBindAdapter.OnLoadMoreListener() {
+                .asGrid(recyclerView, 3, new AutoBindAdapter.OnLoadMoreListener() {
                     @Override
                     public void onLoadMore(int page) {
                         if(!isLoading){
