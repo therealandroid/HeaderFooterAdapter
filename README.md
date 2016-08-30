@@ -44,21 +44,18 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
     adapter.enableFooter(true);                                                  //optional
   ```
   
-##Are you using Grid?
+##Do you want to paginate?
+
+I added an `EndlessScrollListener` if you want to implement pagination
+
+   For Grid
 
    ```java
-   GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-                @Override
-                public int getSpanSize(int position) {
-                    if(adapter.isHeaderPosition(position)){
-                        return 2;
-                    }else if(adapter.isFooterPosition(position)){
-                        return 2;
-                    }else{
-                        return 1;
-                    }
-                }
-            });
-   recyclerView.setLayoutManager(gridLayoutManager);
+      adapter.asGrid(recyclerView, numColumns, AutoBindAdapter.OnLoadMoreListener);
+  ```
+  
+   For List
+   
+   ```java
+      adapter.asList(recyclerView, AutoBindAdapter.OnLoadMoreListener);
   ```
