@@ -3,24 +3,20 @@ package br.com.diogojayme.autobindadapter.sample;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.diogojayme.autobindadapter.R;
-import br.com.diogojayme.autobindadapter.library.AutoBindingAdapter;
-import br.com.diogojayme.autobindadapter.library.EndlessRecyclerOnScrollListener;
+import br.com.diogojayme.autobindadapter.library.AutoBindAdapter;
 
 /**
  * Created by diogojayme on 8/28/16.
  */
 public class TestActivity extends AppCompatActivity {
 
-    boolean asGridLayout = true;
-    AutoBindingAdapter adapter;
+    AutoBindAdapter adapter;
     boolean isLoading;
 
     @Override
@@ -33,68 +29,40 @@ public class TestActivity extends AppCompatActivity {
         HeaderItem headerItem = new HeaderItem("My Pokedex");   //just a normal header with static data
         FooterItem footerItem = new FooterItem();               //just a normal footer with loading
 
-         adapter = new AutoBindingAdapter()
+        adapter = new AutoBindAdapter()
                 .buildItem(R.layout.normal_item, ItemViewHolder.class)
                 .buildHeader(R.layout.header_item, HeaderViewHolder.class)
                 .buildFooter(R.layout.footer_item, FooterViewHolder.class)
                 .bindItems(catchPokemons())
                 .bindHeader(headerItem)
-                .bindFooter(footerItem);
+                .bindFooter(footerItem)
+                .enableHeader(true)
+                .enableFooter(true)
+                .asGrid(recyclerView, 2, new AutoBindAdapter.OnLoadMoreListener() {
+                    @Override
+                    public void onLoadMore(int page) {
+                        if(!isLoading){
+                            loadMore();
+                        }
+                    }
+                });
 
-        adapter.enableHeader(true);
-
-        setLayoutManager(adapter, recyclerView);
         recyclerView.setAdapter(adapter);
     }
 
-    public void setLayoutManager(final AutoBindingAdapter adapter, RecyclerView recyclerView){
-        if(asGridLayout){
-            GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2);
-            gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-                @Override
-                public int getSpanSize(int position) {
-                    if(adapter.isHeaderPosition(position)){
-                        return 2;
-                    }else if(adapter.isFooterPosition(position)){
-                        return 2;
-                    }else{
-                        return 1;
-                    }
-                }
-            });
-
-            recyclerView.setLayoutManager(gridLayoutManager);
-
-            recyclerView.addOnScrollListener(new EndlessRecyclerOnScrollListener(gridLayoutManager) {
-                @Override
-                public void onLoadMore(int current_page) {
-                    if(!isLoading) {
-                        loadMore();
-                    }
-                }
-            });
-        }else{
-            LinearLayoutManager linearLayout = new LinearLayoutManager(this);
-            recyclerView.setLayoutManager(linearLayout);
-            recyclerView.addOnScrollListener(new EndlessRecyclerOnScrollListener(linearLayout) {
-                @Override
-                public void onLoadMore(int current_page) {
-                    if(!isLoading) {
-                        loadMore();
-                    }
-                }
-            });
-        }
-    }
 
     public void loadMore(){
         isLoading = true;
-        adapter.enableFooter(true);
-        adapter.notifyDataSetChanged();
         new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            adapter.enableFooter(true);
+                        }
+                    });
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

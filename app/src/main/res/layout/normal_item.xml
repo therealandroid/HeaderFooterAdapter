@@ -6,10 +6,11 @@
 
     <ImageView
         android:id="@+id/item_pokemon_image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:scaleType="centerCrop"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"
+        android:layout_centerHorizontal="true"/>
 
     <TextView
         android:id="@+id/item_pokemon_name"

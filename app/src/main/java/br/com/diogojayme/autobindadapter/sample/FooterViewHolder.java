@@ -18,5 +18,4 @@ public class FooterViewHolder extends GenericItemViewHolder<FooterItem> {
 
     }
 
-
 }

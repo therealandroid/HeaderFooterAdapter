@@ -1,6 +1,8 @@
 package br.com.diogojayme.autobindadapter.library;
 
 import android.content.res.Resources;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +14,7 @@ import java.util.List;
 /**
  * Created by diogojayme on 8/26/16.
  */
-public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewHolder<I>> implements CustomAdapterMethods{
+public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHolder<I>> implements CustomAdapterMethods{
 
     private List<I> items = null;
     private Item headerItem = null;
@@ -27,14 +29,16 @@ public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewH
     private boolean hasFooter;
 
     @Override
-    public AutoBindingAdapter enableFooter(boolean enabled) {
+    public AutoBindAdapter enableFooter(boolean enabled) {
         hasFooter = enabled;
+        notifyDataSetChanged();
         return this;
     }
 
     @Override
-    public AutoBindingAdapter enableHeader(boolean enabled) {
+    public AutoBindAdapter enableHeader(boolean enabled) {
         hasHeader = enabled;
+        notifyDataSetChanged();
         return this;
     }
 
@@ -47,7 +51,7 @@ public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewH
     }
 
     @Override
-    public AutoBindingAdapter bindItems(List items) {
+    public AutoBindAdapter bindItems(List items) {
         if(this.items == null){
             this.items = new ArrayList<>();
         }
@@ -57,19 +61,19 @@ public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewH
     }
 
     @Override
-    public AutoBindingAdapter bindHeader(Item h){
+    public AutoBindAdapter bindHeader(Item h){
         this.headerItem = h;
         return this;
     }
 
     @Override
-    public AutoBindingAdapter bindFooter(Item f) {
+    public AutoBindAdapter bindFooter(Item f) {
         this.footerItem = f;
         return this;
     }
 
     @Override
-    public AutoBindingAdapter buildItem(int id, Class viewHolderInstance) {
+    public AutoBindAdapter buildItem(int id, Class viewHolderInstance) {
         if(id == -1)
             throw new Resources.NotFoundException("Cannot inflate the resource id " + id);
 
@@ -79,7 +83,7 @@ public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewH
     }
 
     @Override
-    public AutoBindingAdapter buildHeader(int id, Class viewHolderClass) {
+    public AutoBindAdapter buildHeader(int id, Class viewHolderClass) {
         if(id == -1)
             throw new Resources.NotFoundException("Invalid resource item id");
 
@@ -92,7 +96,7 @@ public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewH
     }
 
     @Override
-    public AutoBindingAdapter buildFooter(int id, Class viewHolderClass) {
+    public AutoBindAdapter buildFooter(int id, Class viewHolderClass) {
         if(id == -1)
             throw new Resources.NotFoundException("Invalid resource item id");
 
@@ -101,6 +105,44 @@ public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewH
 
         this.footerResourceId = id;
         this.footerHolder = viewHolderClass;
+        return this;
+    }
+
+    public AutoBindAdapter asGrid(RecyclerView recyclerView, int size, final OnLoadMoreListener loadMoreListener){
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(recyclerView.getContext(), size);
+        recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.addOnScrollListener(new EndlessRecyclerOnScrollListener(gridLayoutManager) {
+            @Override
+            public void onLoadMore(int current_page) {
+                if(loadMoreListener != null)
+                    loadMoreListener.onLoadMore(current_page);
+            }
+        });
+
+        gridLayoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                if(isHeaderPosition(position) || isFooterPosition(position)){
+                    return 2;
+                }else{
+                    return 1;
+                }
+            }
+        });
+
+        return this;
+    }
+
+    public AutoBindAdapter asList(RecyclerView recyclerView, final OnLoadMoreListener loadMoreListener){
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(recyclerView.getContext());
+        recyclerView.addOnScrollListener(new EndlessRecyclerOnScrollListener(linearLayoutManager) {
+            @Override
+            public void onLoadMore(int current_page) {
+                if(loadMoreListener != null)
+                    loadMoreListener.onLoadMore(current_page);
+            }
+        });
+
         return this;
     }
 
@@ -167,4 +209,7 @@ public class AutoBindingAdapter<I> extends RecyclerView.Adapter<GenericItemViewH
     public static  final int FOOTER = 55;
 
 
+    public interface OnLoadMoreListener{
+        void onLoadMore(int page);
+    }
 }
