@@ -2,7 +2,8 @@ package br.com.diogojayme.autobindadapter.sample;
 
 import android.view.View;
 
-import br.com.diogojayme.autobindadapter.library.GenericItemViewHolder;
+import br.com.diogojayme.autobindadapter.GenericItemViewHolder;
+
 
 /**
  * Created by diogojayme on 8/28/16.

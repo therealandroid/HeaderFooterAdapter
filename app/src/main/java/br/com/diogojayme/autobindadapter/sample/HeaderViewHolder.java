@@ -4,8 +4,8 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
+import br.com.diogojayme.autobindadapter.GenericItemViewHolder;
 import br.com.diogojayme.autobindadapter.R;
-import br.com.diogojayme.autobindadapter.library.GenericItemViewHolder;
 
 /**
  * Created by diogojayme on 8/28/16.

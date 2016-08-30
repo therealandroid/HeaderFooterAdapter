@@ -8,8 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.diogojayme.autobindadapter.AutoBindAdapter;
 import br.com.diogojayme.autobindadapter.R;
-import br.com.diogojayme.autobindadapter.library.AutoBindAdapter;
 
 /**
  * Created by diogojayme on 8/28/16.

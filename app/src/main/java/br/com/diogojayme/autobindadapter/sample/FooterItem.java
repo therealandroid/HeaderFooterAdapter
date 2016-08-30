@@ -1,6 +1,7 @@
 package br.com.diogojayme.autobindadapter.sample;
 
-import br.com.diogojayme.autobindadapter.library.Item;
+
+import br.com.diogojayme.autobindadapter.Item;
 
 /**
  * Created by diogojayme on 8/29/16.
