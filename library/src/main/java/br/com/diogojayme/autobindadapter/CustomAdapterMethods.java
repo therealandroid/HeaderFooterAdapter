@@ -19,9 +19,9 @@ public interface CustomAdapterMethods{
 
      RecyclerView.Adapter bindFooter(Item item);
 
-     RecyclerView.Adapter buildItem(int id, Class viewHolderInstance);
+     RecyclerView.Adapter createItemView(int id, Class viewHolderInstance);
 
-     RecyclerView.Adapter buildHeader(int id, Class viewHolderInstance);
+     RecyclerView.Adapter createHeaderView(int id, Class viewHolderInstance);
 
-     RecyclerView.Adapter buildFooter(int id, Class viewHolderInstance);
+     RecyclerView.Adapter createFooterView(int id, Class viewHolderInstance);
 }

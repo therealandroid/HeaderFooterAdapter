@@ -33,9 +33,9 @@ public class TestActivity extends AppCompatActivity {
         FooterItem footerItem = new FooterItem();               //just a normal footer with loading
 
         adapter = new AutoBindAdapter()
-                .buildItem(R.layout.normal_item, ItemViewHolder.class)
-                .buildHeader(R.layout.header_item, HeaderViewHolder.class)
-                .buildFooter(R.layout.footer_item, FooterViewHolder.class)
+                .createItemView(R.layout.normal_item, ItemViewHolder.class)
+                .createHeaderView(R.layout.header_item, HeaderViewHolder.class)
+                .createFooterView(R.layout.footer_item, FooterViewHolder.class)
                 .bindItems(catchPokemons())
                 .bindHeader(headerItem)
                 .bindFooter(footerItem)

@@ -79,7 +79,7 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
     }
 
     @Override
-    public AutoBindAdapter buildItem(int id, Class viewHolderInstance) {
+    public AutoBindAdapter createItemView(int id, Class viewHolderInstance) {
         if(id == -1)
             throw new Resources.NotFoundException("Cannot inflate the resource id " + id);
 
@@ -89,7 +89,7 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
     }
 
     @Override
-    public AutoBindAdapter buildHeader(int id, Class viewHolderClass) {
+    public AutoBindAdapter createHeaderView(int id, Class viewHolderClass) {
         if(id == -1)
             throw new Resources.NotFoundException("Invalid resource item id");
 
@@ -102,7 +102,7 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
     }
 
     @Override
-    public AutoBindAdapter buildFooter(int id, Class viewHolderClass) {
+    public AutoBindAdapter createFooterView(int id, Class viewHolderClass) {
         if(id == -1)
             throw new Resources.NotFoundException("Invalid resource item id");
 
