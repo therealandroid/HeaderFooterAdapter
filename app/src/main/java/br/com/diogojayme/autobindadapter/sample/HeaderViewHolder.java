@@ -1,11 +1,11 @@
 package br.com.diogojayme.autobindadapter.sample;
 
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.TextView;
 
 import br.com.diogojayme.autobindadapter.GenericItemViewHolder;
 import br.com.diogojayme.autobindadapter.R;
+import br.com.diogojayme.autobindadapter.ViewHolderClickListener;
 
 /**
  * Created by diogojayme on 8/28/16.
@@ -19,7 +19,14 @@ public class HeaderViewHolder extends GenericItemViewHolder<HeaderItem> {
     }
 
     @Override
-    public void bindItem(@Nullable HeaderItem item) {
+    public void bindItem(final HeaderItem item, final ViewHolderClickListener<HeaderItem> listener) {
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onHeaderClick(item);
+            }
+        });
+
         title.setText(item.getTitle());
     }
 

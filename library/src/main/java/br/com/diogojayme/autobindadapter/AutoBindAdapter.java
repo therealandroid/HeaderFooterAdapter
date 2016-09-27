@@ -27,6 +27,7 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
     private int footerResourceId = -1;
     private boolean hasHeader;
     private boolean hasFooter;
+    private ViewHolderClickListener listener;
 
     @Override
     public AutoBindAdapter enableFooter(boolean enabled) {
@@ -69,6 +70,11 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
     @Override
     public AutoBindAdapter bindFooter(Item f) {
         this.footerItem = f;
+        return this;
+    }
+
+    public AutoBindAdapter setViewHolderCallback(ViewHolderClickListener listener){
+        this.listener = listener;
         return this;
     }
 
@@ -168,11 +174,11 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
     @Override
     public void onBindViewHolder(GenericItemViewHolder holder, int position) {
         if (isHeaderPosition(position)) {
-            holder.bindItem(headerItem);
+            holder.bindItem(headerItem, listener);
         } else if (isFooterPosition(position)) {
-            holder.bindItem(footerItem);
+            holder.bindItem(footerItem, listener);
         } else {
-            holder.bindItem(getObject(position));
+            holder.bindItem(getObject(position), listener);
         }
     }
 

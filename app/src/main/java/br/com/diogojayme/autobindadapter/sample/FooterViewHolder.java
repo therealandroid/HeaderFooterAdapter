@@ -3,6 +3,7 @@ package br.com.diogojayme.autobindadapter.sample;
 import android.view.View;
 
 import br.com.diogojayme.autobindadapter.GenericItemViewHolder;
+import br.com.diogojayme.autobindadapter.ViewHolderClickListener;
 
 
 /**
@@ -15,8 +16,13 @@ public class FooterViewHolder extends GenericItemViewHolder<FooterItem> {
     }
 
     @Override
-    public void bindItem(FooterItem item) {
-
+    public void bindItem(final FooterItem item, final ViewHolderClickListener<FooterItem> listener) {
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onFooterClick(item);
+            }
+        });
     }
 
 }

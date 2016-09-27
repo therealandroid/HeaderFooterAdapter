@@ -1,28 +1,5 @@
 apply plugin: 'com.android.library'
-
-ext {
-    bintrayRepo = 'maven'
-    bintrayName = 'autobindadapter'
-
-    publishedGroupId = 'br.com.diogojayme.autobindadapter'
-    libraryName = 'AutoBindAdapter'
-    artifact = 'AutoBindAdapter'
-
-    libraryDescription = ''
-
-    siteUrl = 'https://github.com/therealandroid/Android-AutoBindAdapter'
-    gitUrl = 'https://github.com/therealandroid/Android-AutoBindAdapter.git'
-
-    libraryVersion = "0.2"
-
-    developerId = 'therealandroid'
-    developerName = 'Diogo Jayme'
-    developerEmail = 'diogojme@gmail.com'
-
-    licenseName = 'The Apache Software License, Version 2.0'
-    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-    allLicenses = ["Apache-2.0"]
-}
+apply from: 'maven-push.gradle'
 
 android {
     compileSdkVersion 24
@@ -47,6 +24,3 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.android.support:design:24.2.0'
 }
-
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
-apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'

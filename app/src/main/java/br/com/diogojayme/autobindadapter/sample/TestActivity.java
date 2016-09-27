@@ -4,12 +4,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.com.diogojayme.autobindadapter.AutoBindAdapter;
+import br.com.diogojayme.autobindadapter.Item;
 import br.com.diogojayme.autobindadapter.R;
+import br.com.diogojayme.autobindadapter.ViewHolderClickListener;
 
 /**
  * Created by diogojayme on 8/28/16.
@@ -38,7 +41,22 @@ public class TestActivity extends AppCompatActivity {
                 .bindFooter(footerItem)
                 .enableHeader(true)
                 .enableFooter(true)
-                .asGrid(recyclerView, 3, new AutoBindAdapter.OnLoadMoreListener() {
+                .setViewHolderCallback(new ViewHolderClickListener<Pokemon>() {
+                    @Override
+                    public void onHeaderClick(Item item) {
+                        Toast.makeText(TestActivity.this, "Header clicked" , Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onFooterClick(Item object) {
+                        Toast.makeText(TestActivity.this, "Footer clicked" , Toast.LENGTH_SHORT).show();
+                    }
+
+                    @Override
+                    public void onItemClick(Pokemon object, int position) {
+                        Toast.makeText(TestActivity.this, "Item clicked " + position , Toast.LENGTH_SHORT).show();
+                    }
+                }).asGrid(recyclerView, 3, new AutoBindAdapter.OnLoadMoreListener() {
                     @Override
                     public void onLoadMore(int page) {
                         if(!isLoading){

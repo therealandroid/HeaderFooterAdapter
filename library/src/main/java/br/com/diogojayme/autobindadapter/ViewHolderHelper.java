@@ -18,6 +18,7 @@ public class ViewHolderHelper {
      */
     public static Object generateViewHolder(Class tClass, View view){
         try {
+            //TODO Inner ViewHolder Classes doesn't work
             Class<?> clazz= Class.forName(tClass.getName());
             Constructor<?> constructor = clazz.getConstructor(View.class);
             return constructor.newInstance(view);

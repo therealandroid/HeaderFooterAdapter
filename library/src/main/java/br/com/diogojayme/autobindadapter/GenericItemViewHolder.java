@@ -12,5 +12,5 @@ public abstract class GenericItemViewHolder<I> extends RecyclerView.ViewHolder{
         super(itemView);
     }
 
-    public abstract void bindItem(I item);
+    public abstract void bindItem(I item, ViewHolderClickListener<I> listener);
 }

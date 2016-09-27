@@ -1,12 +1,12 @@
 package br.com.diogojayme.autobindadapter.sample;
 
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import br.com.diogojayme.autobindadapter.GenericItemViewHolder;
 import br.com.diogojayme.autobindadapter.R;
+import br.com.diogojayme.autobindadapter.ViewHolderClickListener;
 
 /**
  * Created by diogojayme on 8/28/16.
@@ -23,10 +23,16 @@ public class ItemViewHolder extends GenericItemViewHolder<Pokemon> {
     }
 
     @Override
-    public void bindItem(@Nullable Pokemon pokemon) {
+    public void bindItem(final Pokemon pokemon, final ViewHolderClickListener<Pokemon> listener) {
         name.setText(pokemon.getName());
         image.setImageResource(pokemon.getImage());
-    }
 
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener.onItemClick(pokemon, getAdapterPosition());
+            }
+        });
+    }
 
 }
