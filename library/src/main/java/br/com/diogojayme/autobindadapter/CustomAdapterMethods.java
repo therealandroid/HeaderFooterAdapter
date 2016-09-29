@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by diogojayme on 8/26/16.
  */
-public interface CustomAdapterMethods{
+public interface CustomAdapterMethods<T>{
 
      RecyclerView.Adapter enableFooter(boolean enabled);
 
@@ -24,4 +24,6 @@ public interface CustomAdapterMethods{
      RecyclerView.Adapter createHeaderView(int id, Class viewHolderInstance);
 
      RecyclerView.Adapter createFooterView(int id, Class viewHolderInstance);
+
+     List<T> getItems();
 }

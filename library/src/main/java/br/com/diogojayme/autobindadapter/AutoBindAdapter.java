@@ -114,6 +114,11 @@ public class AutoBindAdapter<I> extends RecyclerView.Adapter<GenericItemViewHold
         return this;
     }
 
+    @Override
+    public List<I> getItems() {
+        return items;
+    }
+
     public AutoBindAdapter asGrid(RecyclerView recyclerView, final int size, final OnLoadMoreListener loadMoreListener){
         GridLayoutManager gridLayoutManager = new GridLayoutManager(recyclerView.getContext(), size);
         recyclerView.setLayoutManager(gridLayoutManager);
