@@ -87,9 +87,9 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
  
 ### Span Size Lookup for Grid
 
-  ```java
-     adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
-  ``` 
+ ```java
+    adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
+ ``` 
   
 ### Attach adapter to recyclerView
 
@@ -99,10 +99,12 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
 
 ###Integration
 
+ ```  
  allprojects {
     repositories {
-      maven { url 'https://jitpack.io' }
+      maven { url 'https://jitpack.io' }
     }
  }
 	
  compile 'com.github.therealandroid:adapterbuilder:1.2'
+ 
