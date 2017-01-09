@@ -80,17 +80,29 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
         
 ### Enable and disable Header and footer
       
-   ```java
+ ```java
    adapterBuilder.enableHeader(true);
    adapterBuilder.enableFooter(true);
  ```
  
-### Span Size Lookup for Grid 
-   ```java
+### Span Size Lookup for Grid
+
+  ```java
      adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
   ``` 
   
 ### Attach adapter to recyclerView
-```java
-   recyclerView.setAdapter(adapterBuilder);
-  ``` 
+
+ ```java
+    recyclerView.setAdapter(adapterBuilder);
+ ``` 
+
+###Integration
+
+ allprojects {
+    repositories {
+      maven { url 'https://jitpack.io' }
+    }
+ }
+	
+ compile 'com.github.therealandroid:adapterbuilder:1.2'
