@@ -30,13 +30,14 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
                 listener.onItemClick(null, getLayoutPosition());
             }
         });
-    }
+    }
  }
-
+ 
 
 ## Builder class
-  ```
-     AdapterBuilder.Builder builder = new AdapterBuilder.Builder()
+
+   ```java
+    AdapterBuilder.Builder builder = new AdapterBuilder.Builder()
                  .normalItemResource(R.layout.item)
                     .withHolder(NormalItemViewHolder.class)
                  .headerItemResource(R.layout.item_header)         //optional
@@ -47,19 +48,19 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
                  .attachRecyclerView(recyclerView);
 
      AdapterBuilder adapterBuilder = builder.build();
-
-  ```
+    ```
 
 ### Adding separated data to the adapter
 
-```
+      ```java
         adapterBuilder.bindHeader(new Object());
         adapterBuilder.bindFooter(new Object());
         adapterBuilder.bindData(new Arraylist());
-```
+      ```
 
 ### Handle Click Listeners
-```
+
+      ```java
         adapterBuilder.setOnViewHolderItemClickListener(new HolderItemClickListener() {
             @Override
             public void onHeaderClick(Object object) {
@@ -77,21 +78,24 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
             }
         });
 
-```
+      ```
 
 ### Enable and disable Header and footer
-```
+
+      ```java
        adapterBuilder.enableHeader(true);
        adapterBuilder.enableFooter(true);
-```
+      ```
 
 ### Span Size Lookup for Grid
-```
-        adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
-```
+
+     ```java
+     adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
+     ```
 
 ### Attach adapter to recyclerView
-```
-recyclerView.setAdapter(adapterBuilder);
-```
+
+   ```java
+   recyclerView.setAdapter(adapterBuilder);
+   ```
 
