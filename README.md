@@ -1,4 +1,4 @@
-# Android-AutoBindAdapter
+# Android-AutoBindAdapter v1.0
 I Was very tired and angry of creating adapters all the time, inflating ViewHolders, adding headers and footers, but before get mad I build this library to help me write less code and save time creating adapters.
 
 `This is a Adapter for RecyclerView and can be used both as List or Grid.`
