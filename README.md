@@ -35,59 +35,62 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
  ```
  
  ## Builder class
-    ```java
-    AdapterBuilder.Builder builder = new AdapterBuilder.Builder()
-                 .normalItemResource(R.layout.item)
-                    .withHolder(NormalItemViewHolder.class)
-                 .headerItemResource(R.layout.item_header)         //optional
-                    .withHolder(HeaderItemViewHolder.class)
-                 .footerItemResource(R.layout.item_footer)         //optional
-                    .withHolder(FooterItemViewHolder.class)
-                 .setOnLoadMoreListener(this)                       //optional
-                 .attachRecyclerView(recyclerView);
+ 
+  ```java
+  AdapterBuilder.Builder builder = new AdapterBuilder.Builder()
+             .normalItemResource(R.layout.item)
+                .withHolder(NormalItemViewHolder.class)
+             .headerItemResource(R.layout.item_header)         //optional
+                .withHolder(HeaderItemViewHolder.class)
+             .footerItemResource(R.layout.item_footer)         //optional
+                .withHolder(FooterItemViewHolder.class)
+             .setOnLoadMoreListener(this)                       //optional
+             .attachRecyclerView(recyclerView);
 
-     AdapterBuilder adapterBuilder = builder.build();
-   ```
+  AdapterBuilder adapterBuilder = builder.build();
+ ```
    
 ### Adding separated data to the adapter
 ```java
-        adapterBuilder.bindHeader(new Object());
-        adapterBuilder.bindFooter(new Object());
-        adapterBuilder.bindData(new Arraylist());
-        ```
+     adapterBuilder.bindHeader(new Object());
+     adapterBuilder.bindFooter(new Object());
+     adapterBuilder.bindData(new Arraylist());
+```
 
 ### Handle Click Listeners
+
 ```java
-        adapterBuilder.setOnViewHolderItemClickListener(new HolderItemClickListener() {
-            @Override
-            public void onHeaderClick(Object object) {
-                Toast.makeText(SampleActivity.this, "Header Clicked", Toast.LENGTH_SHORT).show();
-            }
+     adapterBuilder.setOnViewHolderItemClickListener(new HolderItemClickListener() {
+         @Override
+         public void onHeaderClick(Object object) {
+             Toast.makeText(SampleActivity.this, "Header Clicked", Toast.LENGTH_SHORT).show();
+         }
 
-            @Override
-            public void onFooterClick(Object object) {
-                Toast.makeText(SampleActivity.this, "Footer Clicked", Toast.LENGTH_SHORT).show();
-            }
+         @Override
+         public void onFooterClick(Object object) {
+             Toast.makeText(SampleActivity.this, "Footer Clicked", Toast.LENGTH_SHORT).show();
+         }
 
-            @Override
-            public void onItemClick(Object object, int position) {
-                Toast.makeText(SampleActivity.this, "Item "+position+" Clicked", Toast.LENGTH_SHORT).show();
-            }
-        });
-        ```
+         @Override
+         public void onItemClick(Object object, int position) {
+             Toast.makeText(SampleActivity.this, "Item "+position+" Clicked", Toast.LENGTH_SHORT).show();
+         }
+     });
+```
         
 ### Enable and disable Header and footer
-      ```java
-      adapterBuilder.enableHeader(true);
-      adapterBuilder.enableFooter(true);
-      
+      
+   ```java
+   adapterBuilder.enableHeader(true);
+   adapterBuilder.enableFooter(true);
+ ```
+ 
 ### Span Size Lookup for Grid 
    ```java
      adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
   ``` 
   
-
 ### Attach adapter to recyclerView
 ```java
-   recyclerView.setAdapter(adapterBuilder);```
+   recyclerView.setAdapter(adapterBuilder);
   ``` 
