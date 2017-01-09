@@ -36,7 +36,6 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
 
 ## Builder class
 
-   ```java
     AdapterBuilder.Builder builder = new AdapterBuilder.Builder()
                  .normalItemResource(R.layout.item)
                     .withHolder(NormalItemViewHolder.class)
@@ -48,19 +47,17 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
                  .attachRecyclerView(recyclerView);
 
      AdapterBuilder adapterBuilder = builder.build();
-    ```
+
 
 ### Adding separated data to the adapter
 
-      ```java
         adapterBuilder.bindHeader(new Object());
         adapterBuilder.bindFooter(new Object());
         adapterBuilder.bindData(new Arraylist());
-      ```
+
 
 ### Handle Click Listeners
 
-      ```java
         adapterBuilder.setOnViewHolderItemClickListener(new HolderItemClickListener() {
             @Override
             public void onHeaderClick(Object object) {
@@ -78,24 +75,18 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
             }
         });
 
-      ```
 
 ### Enable and disable Header and footer
 
-      ```java
        adapterBuilder.enableHeader(true);
        adapterBuilder.enableFooter(true);
-      ```
 
 ### Span Size Lookup for Grid
 
-     ```java
      adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
-     ```
+
 
 ### Attach adapter to recyclerView
 
-   ```java
    recyclerView.setAdapter(adapterBuilder);
-   ```
 
