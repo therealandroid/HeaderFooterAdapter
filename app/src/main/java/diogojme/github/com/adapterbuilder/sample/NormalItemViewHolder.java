@@ -3,8 +3,6 @@ package diogojme.github.com.adapterbuilder.sample;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.squareup.picasso.Picasso;
-
 import diogojme.github.com.adapterbuilder.HolderItemClickListener;
 import diogojme.github.com.adapterbuilder.GenericItemViewHolder;
 import diogojme.github.com.adapterbuilder.R;
