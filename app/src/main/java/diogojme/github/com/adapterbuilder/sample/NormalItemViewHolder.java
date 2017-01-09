@@ -24,7 +24,7 @@ public class NormalItemViewHolder extends GenericItemViewHolder<SampleModel> {
 
     @Override
     public void bindItem(SampleModel sampleModel) {
-        Picasso.with(itemView.getContext()).load(sampleModel.getImage()).into(imageView);
+        //bind your object
     }
 
     @Override
