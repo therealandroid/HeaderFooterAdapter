@@ -1,11 +1,7 @@
-# AdapterBuilder v1.1
+# AdapterBuilder v1.1 (OLD)
 I Was very tired and angry of creating adapters all the time, inflating ViewHolders, adding headers and footers, but before get mad I build this library to help me write less code and save time creating adapters.
 
-`This is a Adapter for RecyclerView and can be used for List and Grid.`
-
-#I kill myself if I have to create one more adapter ;<
-
-##Usage
+## Usage
 
    Your FooterViewHolder or HeaderViewHolder class can extends `GenericItemViewHolder` //optional
 
@@ -96,8 +92,7 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
  ```java
     recyclerView.setAdapter(adapterBuilder);
  ``` 
-
-###Integration
+ ### Project Integration
 
  ```  
  allprojects {
@@ -106,5 +101,5 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
     }
  }
 	
- compile 'com.github.therealandroid:adapterbuilder:1.2'
+ compile 'com.github.therealandroid:adapterbuilder:lastVersion'
  
