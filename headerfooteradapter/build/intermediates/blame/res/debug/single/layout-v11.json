@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/layout-v11/notification_media_cancel_action.xml"
+    }
+]
