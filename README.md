@@ -1,7 +1,18 @@
-# AdapterBuilder v1.1 (OLD)
-I Was very tired and angry of creating adapters all the time, inflating ViewHolders, adding headers and footers, but before get mad I build this library to help me write less code and save time creating adapters.
+# HeaderFooterAdapter 
 
-## Usage
+### Version v1.2 
+- <b> (New) </b> Customize your adapter
+- Create your custom header and footer views
+- Easy to add or remove header and footer
+- <b> (New) </b> Now you can add your custom load more listener 
+
+### Version v1.1 
+- Easy to create an Adapter for RecyclerView
+- Create your custom header and footer views
+- Easy to add or remove header and footer
+- Load more listener
+
+#### Usage
 
    Your FooterViewHolder or HeaderViewHolder class can extends `GenericItemViewHolder` //optional
 
@@ -30,7 +41,7 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
  }
  ```
  
- ## Builder class
+ #### Builder class
  
   ```java
   AdapterBuilder.Builder builder = new AdapterBuilder.Builder()
@@ -46,14 +57,14 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
   AdapterBuilder adapterBuilder = builder.build();
  ```
    
-### Adding separated data to the adapter
+#### Adding separated data to the adapter
 ```java
      adapterBuilder.bindHeader(new Object());
      adapterBuilder.bindFooter(new Object());
      adapterBuilder.bindData(new Arraylist());
 ```
 
-### Handle Click Listeners
+#### Handle Click Listeners
 
 ```java
      adapterBuilder.setOnViewHolderItemClickListener(new HolderItemClickListener() {
@@ -74,25 +85,25 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
      });
 ```
         
-### Enable and disable Header and footer
+#### Enable and disable Header and footer
       
  ```java
    adapterBuilder.enableHeader(true);
    adapterBuilder.enableFooter(true);
  ```
  
-### Span Size Lookup for Grid
+#### Span Size Lookup for Grid
 
  ```java
     adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
  ``` 
   
-### Attach adapter to recyclerView
+#### Attach adapter to recyclerView
 
  ```java
     recyclerView.setAdapter(adapterBuilder);
  ``` 
- ### Project Integration
+ #### Project Integration
 
  ```  
  allprojects {
