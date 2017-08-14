@@ -1,18 +1,10 @@
 [
     {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_out.xml",
-        "source": "/Users/diogojayme/.android/build-cache/caa88694f07a2274783fba1651fd251bd3327f36/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
-    },
-    {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_out.xml",
         "source": "/Users/diogojayme/.android/build-cache/caa88694f07a2274783fba1651fd251bd3327f36/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
     },
     {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_in.xml",
-        "source": "/Users/diogojayme/.android/build-cache/caa88694f07a2274783fba1651fd251bd3327f36/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/anim-v21/design_bottom_sheet_slide_in.xml",
         "source": "/Users/diogojayme/.android/build-cache/caa88694f07a2274783fba1651fd251bd3327f36/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
     }
 ]

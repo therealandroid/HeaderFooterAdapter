@@ -4,14 +4,6 @@
         "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_edittext.xml"
     },
     {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_text_material.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_btn_colored_text_material.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_track.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_switch_track.xml"
-    },
-    {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_track.xml",
         "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_switch_track.xml"
     },
@@ -24,40 +16,12 @@
         "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_btn_colored_text_material.xml"
     },
     {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/design_tint_password_toggle.xml",
-        "source": "/Users/diogojayme/.android/build-cache/caa88694f07a2274783fba1651fd251bd3327f36/output/res/color-v23/design_tint_password_toggle.xml"
-    },
-    {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_seek_thumb.xml",
         "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_btn_checkable.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_default.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_edittext.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_edittext.xml"
-    },
-    {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_default.xml",
         "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_default.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_spinner.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_spinner.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_color_highlight_material.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_color_highlight_material.xml"
     },
     {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_spinner.xml",
@@ -70,14 +34,6 @@
     {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_btn_checkable.xml",
         "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_btn_checkable.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_thumb.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_switch_thumb.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_seek_thumb.xml",
-        "source": "/Users/diogojayme/.android/build-cache/15b78d6fbc049018c8359b96307ba0ca35c95064/output/res/color-v23/abc_tint_seek_thumb.xml"
     },
     {
         "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
