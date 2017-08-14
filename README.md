@@ -1,5 +1,7 @@
 # HeaderFooterAdapter 
 
+[![JitPack version](https://jitpack.io/v/therealandroid/HeaderFooterAdapter.svg)](https://jitpack.io/#therealandroid/HeaderFooterAdapter)
+
 ### Version v1.2 
 - <b> (New) </b>Less code to create your header and footer Adapter
 - Create your custom header and footer views
