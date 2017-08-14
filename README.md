@@ -1,11 +1,21 @@
-# AdapterBuilder v1.1
-I Was very tired and angry of creating adapters all the time, inflating ViewHolders, adding headers and footers, but before get mad I build this library to help me write less code and save time creating adapters.
+# HeaderFooterAdapter 
 
-`This is a Adapter for RecyclerView and can be used for List and Grid.`
+[![JitPack version](https://jitpack.io/v/therealandroid/HeaderFooterAdapter.svg)](https://jitpack.io/#therealandroid/HeaderFooterAdapter)
 
-#I kill myself if I have to create one more adapter ;<
+### Version v1.2 
+- <b> (New) </b>Less code to create your header and footer Adapter
+- Create your custom header and footer views
+- Easy to add or remove header and footer
+- <b> (New) </b> Now you can add your custom load more listener 
+- Item (Header, footer or normal) clicks can be added by you from your Adapter or ViewHolder 
 
-##Usage
+### Version v1.1 
+- Easy to create an Adapter for RecyclerView
+- Create your custom header and footer views
+- Easy to add or remove header and footer
+- Load more listener
+
+### Usage (Deprecated)
 
    Your FooterViewHolder or HeaderViewHolder class can extends `GenericItemViewHolder` //optional
 
@@ -34,7 +44,7 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
  }
  ```
  
- ## Builder class
+ #### Builder class
  
   ```java
   AdapterBuilder.Builder builder = new AdapterBuilder.Builder()
@@ -50,14 +60,14 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
   AdapterBuilder adapterBuilder = builder.build();
  ```
    
-### Adding separated data to the adapter
+#### Adding separated data to the adapter
 ```java
      adapterBuilder.bindHeader(new Object());
      adapterBuilder.bindFooter(new Object());
      adapterBuilder.bindData(new Arraylist());
 ```
 
-### Handle Click Listeners
+#### Handle Click Listeners
 
 ```java
      adapterBuilder.setOnViewHolderItemClickListener(new HolderItemClickListener() {
@@ -78,26 +88,25 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
      });
 ```
         
-### Enable and disable Header and footer
+#### Enable and disable Header and footer
       
  ```java
    adapterBuilder.enableHeader(true);
    adapterBuilder.enableFooter(true);
  ```
  
-### Span Size Lookup for Grid
+#### Span Size Lookup for Grid
 
  ```java
     adapterBuilder.setSpanSizeLookup(1, 2); // For Grid
  ``` 
   
-### Attach adapter to recyclerView
+#### Attach adapter to recyclerView
 
  ```java
     recyclerView.setAdapter(adapterBuilder);
  ``` 
-
-###Integration
+ #### Project Integration
 
  ```  
  allprojects {
@@ -106,5 +115,6 @@ I Was very tired and angry of creating adapters all the time, inflating ViewHold
     }
  }
 	
- compile 'com.github.therealandroid:adapterbuilder:1.2'
+compile 'com.github.therealandroid:HeaderFooterAdapter:1.2.0'
+
  
