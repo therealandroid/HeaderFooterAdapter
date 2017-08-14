@@ -12,7 +12,7 @@
 - Easy to add or remove header and footer
 - Load more listener
 
-#### Usage
+### Usage (Deprecated)
 
    Your FooterViewHolder or HeaderViewHolder class can extends `GenericItemViewHolder` //optional
 
