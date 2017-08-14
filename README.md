@@ -1,10 +1,11 @@
 # HeaderFooterAdapter 
 
 ### Version v1.2 
-- <b> (New) </b> Customize your adapter
+- <b> (New) </b>Less code to create your header and footer Adapter
 - Create your custom header and footer views
 - Easy to add or remove header and footer
 - <b> (New) </b> Now you can add your custom load more listener 
+- Item (Header, footer or normal) clicks can be added by you from your Adapter or ViewHolder 
 
 ### Version v1.1 
 - Easy to create an Adapter for RecyclerView
