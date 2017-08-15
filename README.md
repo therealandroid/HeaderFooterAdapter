@@ -116,6 +116,6 @@
     }
  }
 	
-compile 'com.github.therealandroid:HeaderFooterAdapter:1.2.0'
+compile 'com.github.therealandroid:HeaderFooterAdapter:1.2.1'
 
  
