@@ -1,5 +1,6 @@
 # HeaderFooterAdapter 
 
+[![GitHub version](https://badge.fury.io/gh/therealandroid%2FHeaderFooterAdapter.svg)](https://badge.fury.io/gh/therealandroid%2FHeaderFooterAdapter)
 [![JitPack version](https://jitpack.io/v/therealandroid/HeaderFooterAdapter.svg)](https://jitpack.io/#therealandroid/HeaderFooterAdapter)
 
 ### Version v1.2 
