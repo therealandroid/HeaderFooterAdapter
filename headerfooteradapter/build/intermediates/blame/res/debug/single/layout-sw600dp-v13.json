@@ -1,10 +1,6 @@
 [
     {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/app/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
-        "source": "/Users/diogojayme/.android/build-cache/caa88694f07a2274783fba1651fd251bd3327f36/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
-    },
-    {
-        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter-1/headerfooteradapter/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
+        "merged": "/Users/diogojayme/Documents/android-apps/HeaderFooterAdapter/headerfooteradapter/build/intermediates/res/merged/debug/layout-sw600dp-v13/design_layout_snackbar.xml",
         "source": "/Users/diogojayme/.android/build-cache/caa88694f07a2274783fba1651fd251bd3327f36/output/res/layout-sw600dp-v13/design_layout_snackbar.xml"
     }
 ]
